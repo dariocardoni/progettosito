@@ -1,0 +1,85 @@
+
+#titolo{
+	position:absolute;
+	left:14%;
+top:35%;
+font-size:2%;
+background-color:transparent;
+border-radius: 100%;
+
+z-index: +1;
+}
+
+#welcome{color:black;
+	text-shadow: 2px 2px orange;
+	text-decoration: blink;
+	height:10%;
+	width:50%;
+ 
+}
+
+
+
+
+#sfondo{
+	z-index: -1;
+	width:100%;
+	height:100%;
+	
+
+}
+#newyork{
+filter:brightness(70%);
+transition-property:opacity;
+	transition-duration:4s;
+	width:100%;
+}
+
+#immagini{width:100%;
+	height:35%;
+	position:absolute;
+	z-index: +1;
+    top:100%;
+	left:0;
+	background-color: black;
+	display: flex;
+	 filter: drop-shadow(100px 100px 100px black); -webkit-filter: drop-shadow(100px 100px 100px black);
+	
+	}
+	#immagini:hover{
+		border-style:solid;
+		border-width: 20px;
+		border-color: #a56804;
+		border-left:none;
+		border-right:none;
+	}
+
+	#chitarra:hover{
+		filter:sepia(70%);
+		
+	}
+
+
+#chitarra{height:100%;
+	width:33%;
+	display:none;
+}
+#sax:hover{
+		filter:sepia(70%);
+	}
+
+#sax{height:100%;
+display:none;
+width:33%;
+}
+#piano:hover{
+		filter:sepia(70%);
+	}
+#piano{height:100%;
+	display:none;
+	width:33%;
+	
+
+
+}
+
