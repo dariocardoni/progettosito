@@ -9,6 +9,12 @@ mat-toolbar{ background-color:black;
 	
 }
 
+i{
+	margin-top:10%;
+	margin-right:5%;
+	font-size: 150%;
+}
+
 #logo{height:50px;
 	width:50px;
 	border-radius:50%;
@@ -21,6 +27,11 @@ mat-toolbar{ background-color:black;
 span{
 	display:flex;
 
+}
+
+#home{
+	position:absolute;
+	right:50%;
 }
 h3{
 	color:orange;

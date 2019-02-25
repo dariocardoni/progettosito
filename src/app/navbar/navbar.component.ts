@@ -1,8 +1,5 @@
-import { Component } from '@angular/core';
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 import * as $ from 'jquery';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
@@ -11,16 +8,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 mioForm:FormGroup;
 mioForm2:FormGroup;
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches)
-    );
+
+
+  
     
-  constructor (private breakpointObserver: BreakpointObserver, private router: Router) {
+  constructor ( private router: Router) {
   this.mioForm2 = new FormGroup({
       nome: new FormControl('', [
         Validators.required,
@@ -31,7 +27,7 @@ mioForm2:FormGroup;
       datadi_nascita: new FormControl('', [Validators.required]),
       residenza: new FormControl('', [Validators.required]),
       domicilio: new FormControl('', [Validators.required]),
-      telefono: new FormControl('', [Validators.required])
+      telefono: new FormControl('', [Validators.required, Validators.minLength(8), Validators.maxLength(10)])
     
     });
 
@@ -44,6 +40,7 @@ mioForm2:FormGroup;
 
 
   }
+
    
    get username() { return this.mioForm.get('username'); }
 
@@ -81,6 +78,7 @@ mioForm2:FormGroup;
   }
 
 
+
 login(router: Router){
   
 
@@ -98,51 +96,53 @@ if( dati.username == username && dati.password == password){
   }
 
 }
-messaggio(): void{
+
+ 
+
+messaggio(){
     if(this.mioForm2.get('nome').valid && this.mioForm2.get('citta').valid  && this.mioForm2.get('cognome').valid && this.mioForm2.get('domicilio').valid &&
     this.mioForm2.get('mail').valid && this.mioForm2.get('residenza').valid && this.mioForm2.get('telefono').valid && this.mioForm2.get('datadi_nascita').valid)  {
-    alert("Registrazione completata!")};
+    alert("Registrazione completata!")}
+    else{
+    alert("Controlla meglio");
+    }
+    }
+ 
+casa(router:Router){
+  this.router.navigate(["home"]);
+
+  
+
 
 
   }
+  
+
+toggle_primo(){$("#form").toggle();}
+toggle_secondo(){$("#form2").toggle();}
+scompare_form(){$("#form").css("display","none");}
+scompare_formdue(){$("#form2").css("display","none");}
+
+
+
+
+ngOnInit() {
+  
+  $("#form").css("display","none");
+  $("#form2").css("display","none");
+  
+  
 }
 
 
-  
+
+}
+
+
+
  
   
 
 
-
-
-
-
-  $(function(){
-  $("#form").css("display","none")
-  });
-  $(function(){
-  $("#primo").click(function(){
-  $("#form").toggle()
-  });
-  });
-
-  $(function(){
-  $("#form2").css("display","none")
-  });
-  $(function(){
-  $("#secondo").click(function(){
-  $("#form2").toggle()
-  });
-  });
-
-  $(function(){
-  $("#secondo").click(function(){
-  $("#form").css("display","none")
-   });
-  });
-
-$(function(){
-  $("#primo").click(function(){
-  $("#form2").css("display","none")
-   });
-  });
+  
+ 

@@ -1,7 +1,8 @@
 <mat-toolbar  style="display:flex" >
+ 
   <img id="logo" src="https://thumbs.dreamstime.com/z/logo-del-wordmark-di-jazz-84978167.jpg">
   <span><h3>M</h3><h1 id="usic">usic</h1></span>
-  <span id="pulsanti" display="flex"><button color="primary" id="primo">Log in</button><button id="secondo">Sign in</button></span>
+  <span id="pulsanti" display="flex"><button (click)="casa()"><i class="material-icons" style="color:orange">home</i></button><button color="primary" id="primo" (click)="toggle_primo()" (click)="scompare_formdue()">Log in</button><button id="secondo" (click)="toggle_secondo()" (click)="scompare_form()">Sign in</button></span>
 </mat-toolbar>
 
 
@@ -31,7 +32,7 @@
 <form class="modulo2" [formGroup]="mioForm2">
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Nome" formControlName="nome">
+    <input matInput placeholder="Nome" formControlName="nome" ngModel pattern="[a-z,A-Z]*">
     <span *ngIf="nome.invalid && (nome.dirty || nome.touched)">
     <span *ngIf="nome.errors.minlength">Scrivi almeno 2 caratteri</span>
      <span *ngIf="nome.errors.required">Inserisci nome</span></span>
@@ -39,7 +40,7 @@
  
 
 <mat-form-field class="example-full-width">
-    <input matInput placeholder="Cognome"  formControlName="cognome" >
+    <input matInput placeholder="Cognome"  formControlName="cognome" ngModel pattern="[a-z,A-Z]*">
     <span *ngIf="cognome.invalid && (cognome.dirty || cognome.touched)">
     <span *ngIf="cognome.errors.minlength">Scrivi almeno 5 caratteri</span>
     <span *ngIf="cognome.errors.required">Inserisci cognome</span></span>
@@ -72,7 +73,7 @@
 </mat-form-field>
 
  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Telefono" type="number"  formControlName="telefono">
+    <input matInput placeholder="Telefono" type="number"  formControlName="telefono" ngModel pattern="[0-9]*">
     <span *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
     <span *ngIf="telefono.errors.required">Inserisci numero di telefono</span></span>
    </mat-form-field>
@@ -85,7 +86,7 @@
     <span *ngIf="mail.errors.email">Mail non corretta</span></span>
     
 </mat-form-field><br>
-<button (click)="messaggio()">regitrazione</button>
+<button (click)="messaggio()">registrazione</button>
 
   </form>
 </span>
