@@ -21,8 +21,22 @@ setTimeout(function(){
     $('#sax').fadeIn()},1000);
     setTimeout(function(){
     $('#piano').fadeIn()},1500);
+    
 
   });
+
+$("#immagini").on('mouseover',function(){
+$('#newyork').css({ "filter": "blur(5px)", "-webkit-filter": "blur(5px)" });
+});
+$("#immagini").on('mouseout',function(){
+$('#newyork').css({ "filter": "brightness(70%)", "-webkit-filter": "brightness(70%)",});
+});
+$("#immagini").on('mouseover',function(){
+$('#welcome').css({ "filter": "grayscale(100%)", "-webkit-filter": "grayscale(100%)" });
+});
+$("#immagini").on('mouseout',function(){
+$('#welcome').css({ "filter": "grayscale(0%)", "-webkit-filter": "grayscale(0%)" });
+});
 
 
 
@@ -34,6 +48,4 @@ setTimeout(function(){
 
 
 }
-  
-
 

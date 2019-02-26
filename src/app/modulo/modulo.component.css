@@ -1,0 +1,102 @@
+#pulsanteuno{
+	position:absolute;
+	z-index:+2;
+	left:5%;
+	top:35%;
+	font-size:50px;
+	font-family: fantasy;
+	color:orange;
+	letter-spacing: 4px;
+	border-radius:8px 8px;
+
+
+}
+
+#pulsantedue{
+	position:absolute;
+	z-index:+2;
+	left:5%;
+	top:90%;
+	font-size:50px;
+	font-family: fantasy;
+	color:orange;
+	letter-spacing: 4px;
+	border-radius:8px 8px;
+	z-index:2;
+
+}
+
+#tabellauno{
+	position:absolute;
+	top:40%;
+	z-index:+2;
+	font-size:24px;
+	margin-left:20%;
+	top:19%;
+	height:45%;
+	width:55%; 
+left:1%;;      }
+
+	table{
+		color:black;
+		background-image:url("https://previews.123rf.com/images/eugenesergeev/eugenesergeev1310/eugenesergeev131000315/23310840-grigio-chiaro-muro-grezzo-in-cemento-sfondo-senza-soluzione-di-continuit%C3%A0-fotografia-texture.jpg");
+		border-radius:10px 8px;
+	box-shadow:6px 4px 3px grey;}
+	
+	#eventi{
+		background-color: white;
+		display:none;
+		transition-property:font-size;
+		transition-duration:3s;
+}
+#eventi:hover{
+	font-size: 25px;}
+#news:hover{
+	font-size: 17px;
+}
+
+
+	#tabelladue{
+		position:absolute;
+	top:35%;
+	z-index:+2;
+	margin-left:20%;
+	top:80%;
+	height:40%;
+	width:55%;
+    left:-100;             }
+	
+	#news{
+		background-color: white;
+		display:none;
+		height:100%;
+		width:100%;
+		font-size:12px;
+		transition-property:font-size;
+		transition-duration:3s;
+	}
+	
+
+#prima{
+	display:none;
+}	
+#seconda{
+	display:none;
+}
+	
+
+th{
+	font-family: fantasy;
+	
+}
+#sfondo{
+	position: absolute;
+	width:100%;
+	z-index:+1;
+}
+img{
+	width:100%;
+	height:100%;
+	z-index:+1;
+	filter:brightness(50%);
+}

@@ -1,9 +1,18 @@
 
 <app-navbar></app-navbar>
-<img src="https://www.c2dh.uni.lu/sites/default/files/styles/full_width/public/field/image/capture.png?itok=REb8jh_H">
-
-<router-outlet></router-outlet>
+<button id="pulsantedue" (click)="recuperonews()">Open</button>
+<button id="pulsanteuno"  (click)="recupera_eventi()">Open</button>
+<div id="sfondo"><img src="https://www.muralswallpaper.com/app/uploads/new-york-landscape-plain.jpg"></div>
+<div id="tabellauno">
   
-  
+  <table id="eventi">
+    <tr id="prima"><th>NOME EVENTO</th><th>DATA EVENTO</th></tr>
+  </table>
+</div>
+ <div id="tabelladue" >
+<table id="news">
+  <tr id="seconda"><th>TITOLO</th><th>AUTORE</th><th>DESCRIZIONE</th></tr>
+</table>
+</div> 
 
   
